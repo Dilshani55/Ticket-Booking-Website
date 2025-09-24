@@ -8,6 +8,7 @@ import path from "path";
 
 import authRoutes from "./routes/authRoutes.js";
 import movieRoutes from "./routes/movieRoutes.js";
+import bookingRoutes from "./routes/bookingRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -28,6 +29,7 @@ mongoose
   // ---------- API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/movies", movieRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 // ---------- Error Handler
 app.use((err, req, res, next) => {
