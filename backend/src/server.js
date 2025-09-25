@@ -10,6 +10,7 @@ import authRoutes from "./routes/authRoutes.js";
 import movieRoutes from "./routes/movieRoutes.js";
 import bookingRoutes from "./routes/bookingRoutes.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
+import { stripeWebhook } from "./controllers/webhookController.js";
 
 dotenv.config();
 const app = express();
