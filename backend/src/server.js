@@ -9,6 +9,7 @@ import path from "path";
 import authRoutes from "./routes/authRoutes.js";
 import movieRoutes from "./routes/movieRoutes.js";
 import bookingRoutes from "./routes/bookingRoutes.js";
+import paymentRoutes from "./routes/paymentRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -30,6 +31,7 @@ mongoose
 app.use("/api/auth", authRoutes);
 app.use("/api/movies", movieRoutes);
 app.use("/api/bookings", bookingRoutes);
+app.use("/api/payment", paymentRoutes);
 
 // ---------- Error Handler
 app.use((err, req, res, next) => {
