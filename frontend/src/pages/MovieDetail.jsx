@@ -17,7 +17,7 @@ function MovieDetail() {
       alert("Please select a date first!");
       return;
     }
-    navigate(/seat-selection/${id}?date=${selectedDate});
+    navigate(`/seat-selection/${id}?date=${selectedDate}`);
   };
 
   if (!movie) return <div className="text-white p-10">Loading...</div>;
@@ -45,7 +45,7 @@ function MovieDetail() {
             <button
               key={date}
               onClick={() => setSelectedDate(date)}
-              className={px-4 py-2 rounded ${selectedDate === date ? "bg-pink-600" : "bg-gray-700"}}
+              className={`px-4 py-2 rounded ${selectedDate === date ? "bg-pink-600" : "bg-gray-700"}`}
             >
               {new Date(date).toDateString()}
             </button>

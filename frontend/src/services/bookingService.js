@@ -14,6 +14,6 @@ export const getMyBookings = async () => {
 
 // Cancel booking (example: DELETE)
 export const cancelBooking = async (id) => {
-  const { data } = await API.delete(/bookings/${id});
+  const { data } = await API.delete(`/bookings/${id}`);
   return data;
 };

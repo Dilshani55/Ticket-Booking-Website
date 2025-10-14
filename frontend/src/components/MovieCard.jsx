@@ -26,7 +26,7 @@ function MovieCard({ movie }) {
         <div className="flex items-center justify-between">
           {/* 🔗 Navigate to movie details page */}
           <button
-            onClick={() => navigate(/movie/${movie._id})}
+            onClick={() => navigate(`/movie/${movie._id}`)}
             className="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-md text-sm font-medium"
           >
             Buy Ticket

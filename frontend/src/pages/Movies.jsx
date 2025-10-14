@@ -36,7 +36,7 @@ function Movies() {
               {/* Footer: Buy Ticket & Rating */}
               <div className="flex items-center justify-between">
                 <button 
-                  onClick={() => window.location.href=/movie/${m._id}} 
+                  onClick={() => window.location.href=`/movie/${m._id}`} 
                   className="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-md text-sm font-medium">
                   Buy Ticket
               </button>

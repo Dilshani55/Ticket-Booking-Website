@@ -16,7 +16,7 @@ export const stripeWebhook = async (req, res) => {
     );
   } catch (err) {
     console.error("Webhook Error:", err.message);
-    return res.status(400).send(Webhook Error: ${err.message});
+    return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
   // Handle event types
@@ -28,7 +28,7 @@ export const stripeWebhook = async (req, res) => {
       const bookingId = session.metadata.bookingId;
       await Booking.findByIdAndUpdate(bookingId, { paymentStatus: "paid" });
 
-      console.log(✅ Booking ${bookingId} marked as paid);
+      console.log(`✅ Booking ${bookingId} marked as paid`);
     } catch (err) {
       console.error("Error updating booking:", err);
     }

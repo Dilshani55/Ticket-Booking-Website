@@ -8,7 +8,7 @@ function SeatSelection() {
   const [selectedSeats, setSelectedSeats] = useState([]);
   const date = new URLSearchParams(location.search).get("date");
 
-  const allSeats = Array.from({ length: 30 }, (_, i) => A${i + 1});
+  const allSeats = Array.from({ length: 30 }, (_, i) => `A${i + 1}`);
 
   const toggleSeat = (seat) => {
     setSelectedSeats((prev) =>
@@ -21,7 +21,7 @@ function SeatSelection() {
       alert("Select at least one seat!");
       return;
     }
-    navigate(/checkout/${id}?date=${date}&seats=${selectedSeats.join(",")});
+    navigate(`/checkout/${id}?date=${date}&seats=${selectedSeats.join(",")}`);
   };
 
   return (
@@ -32,7 +32,7 @@ function SeatSelection() {
           <button
             key={seat}
             onClick={() => toggleSeat(seat)}
-            className={w-12 h-12 rounded ${selectedSeats.includes(seat) ? "bg-pink-600" : "bg-gray-700"}}
+            className={`w-12 h-12 rounded ${selectedSeats.includes(seat) ? "bg-pink-600" : "bg-gray-700"}`}
           >
             {seat}
           </button>

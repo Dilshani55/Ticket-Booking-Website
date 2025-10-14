@@ -4,11 +4,11 @@ import API from "./api";  // your axios instance
 const authHeader = () => {
   const token = localStorage.getItem("token");
   if (!token) {
-    console.warn("⚠ No auth token found in localStorage");
+    console.warn("⚠️ No auth token found in localStorage");
     return {};
   }
   return {
-    headers: { Authorization: Bearer ${token} },
+    headers: { Authorization: `Bearer ${token}` },
   };
 };
 
@@ -28,10 +28,10 @@ export const getMovies = async () => {
 // Get single movie by ID
 export const getMovieById = async (id) => {
   try {
-    const { data } = await API.get(/movies/${id});
+    const { data } = await API.get(`/movies/${id}`);
     return data;
   } catch (err) {
-    console.error(❌ Failed to fetch movie ${id}:, err.response?.data || err.message);
+    console.error(`❌ Failed to fetch movie ${id}:`, err.response?.data || err.message);
     throw err;
   }
 };
@@ -53,11 +53,11 @@ export const addMovie = async (movieData) => {
 // Update Movie
 export const updateMovie = async (id, movieData) => {
   try {
-    const { data } = await API.put(/movies/${id}, movieData, authHeader());
+    const { data } = await API.put(`/movies/${id}`, movieData, authHeader());
     console.log("✅ Movie updated:", data);
     return data;
   } catch (err) {
-    console.error(❌ Failed to update movie ${id}:, err.response?.data || err.message);
+    console.error(`❌ Failed to update movie ${id}:`, err.response?.data || err.message);
     throw err;
   }
 };
@@ -65,11 +65,11 @@ export const updateMovie = async (id, movieData) => {
 // Delete Movie
 export const deleteMovie = async (id) => {
   try {
-    const { data } = await API.delete(/movies/${id}, authHeader());
+    const { data } = await API.delete(`/movies/${id}`, authHeader());
     console.log("✅ Movie deleted:", data);
     return data;
   } catch (err) {
-    console.error(❌ Failed to delete movie ${id}:, err.response?.data || err.message);
+    console.error(`❌ Failed to delete movie ${id}:`, err.response?.data || err.message);
     throw err;
   }
 };
