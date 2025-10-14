@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #111;
+}
+
+.logo {
+  color: #e50914;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links a:hover {
+  color: #e50914;
+}
+
+.login-btn {
+  background: #e50914;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Movie Section */
+.movie-section {
+  display: flex;
+  padding: 40px;
+  gap: 30px;
+}
+
+.movie-poster {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.movie-info .lang {
+  color: #e50914;
+  text-transform: uppercase;
+}
+
+.movie-info .title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.movie-info .rating {
+  color: gold;
+  margin: 10px 0;
+}
+
+.movie-info .desc {
+  color: #bbb;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.movie-info .extra {
+  margin-top: 10px;
+  color: #888;
+}
+
+.btns {
+  margin-top: 20px;
+}
+
+.trailer-btn {
+  background: #1e90ff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.buy-btn {
+  background: #e50914;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Cast Section */
+.cast {
+  padding: 40px;
+}
+
+.cast h2 {
+  margin-bottom: 20px;
+}
+
+.cast-list {
+  display: flex;
+  gap: 20px;
+}
+
+.cast-card {
+  text-align: center;
+}
+
+.cast-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  background: #111;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 5px 0;
+  color: #bbb;
+}
